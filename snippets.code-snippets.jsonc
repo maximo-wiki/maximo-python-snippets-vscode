@@ -1,0 +1,81 @@
+{
+    "Maximo.py getMboSet": {
+        "prefix": "getMboSet",
+        "body": [
+          "${1:mbovar} = ${2:mbo}.getMboSet('${3:mboSetName}')"
+        ],
+        "description": "maximo.wiki snippet mbo.getMboSet"
+      },
+      "Maximo.py getBoolean": {
+        "prefix": "getBoolean",
+        "body": [
+          "${1:boolvar} = ${2:mbo}.getBoolean('${3:fieldname}')"
+        ],
+        "description": "maximo.wiki snippet mbo.getBoolean"
+      },
+      "Maximo.py getString": {
+        "prefix": "getString",
+        "body": [
+          "${1:stringvar} = ${2:mbo}.getString('${3:fieldname}')"
+        ],
+        "description": "maximo.wiki snippet mbo.getString"
+      },
+      "Maximo.py getInt": {
+        "prefix": "getInt",
+        "body": [
+          "${1:intvar} = ${2:mbo}.getInt('${3:fieldname}')"
+        ],
+        "description": "maximo.wiki snippet mbo.getString"
+      },
+      "Maximo.py getByte": {
+        "prefix": "getByte",
+        "body": [
+          "${1:bytevar} = ${2:mbo}.getByte('${3:fieldname}')"
+        ],
+        "description": "maximo.wiki snippet mbo.getByte"
+      },
+      "Maximo.py getLong": {
+        "prefix": "getLong",
+        "body": [
+          "${1:longvar} = ${2:mbo}.getLong('${3:fieldname}')"
+        ],
+        "description": "maximo.wiki snippet mbo.getLong"
+      },
+      "Maximo.py getFloat": {
+        "prefix": "getFloat",
+        "body": [
+          "${1:floatvar} = ${2:mbo}.getFloat('${3:fieldname}')"
+        ],
+        "description": "maximo.wiki snippet mbo.getFloat"
+      },
+      "Maximo.py getDouble": {
+        "prefix": "getDouble",
+        "body": [
+          "${1:doublevar} = ${2:mbo}.getDouble('${3:fieldname}')"
+        ],
+        "description": "maximo.wiki snippet mbo.getDouble"
+      },
+      "Maximo.py getDate": {
+        "prefix": "getDate",
+        "body": [
+          "${1:java.util.date} = ${2:mbo}.getDate('${3:fieldname}')"
+        ],
+        "description": "maximo.wiki snippet mbo.getDate"
+      },
+      "Service choice": {
+        "prefix": "servc",
+        "body":"service.${1|log,warn,error|}('${0}')",
+        "description": "maximo.wiki snippet service.log"
+      },
+      "scriptName": {
+        "prefix": "sn",
+        "body":"scriptName",
+        "description": "maximo.wiki snippet scriptName"
+      },
+      "import": {
+        "prefix": "imp",
+        "body":"from ${1:psdi.package} import ${2:packageName}",
+        "description": "maximo.wiki snippet import package"
+      },
+
+}

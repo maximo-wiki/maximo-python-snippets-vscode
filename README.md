@@ -30,19 +30,21 @@ Initial release of IBM Maximo Python Snippets.
 
 Added animated GIF to README.md and example snippet prefixes.
 
+### 1.0.2
 
+Fixed animated GIF in README
 -----------------------------------------------------------------------------------------------------------
 
-## Working with Maximo Wiki Python Snippets
+### Working with Maximo Wiki Python Snippets
 
 **Note:** In order to utilise Maximo Wiki Python Snippets create a new file or edit an existing file in Visual Studio code and select Python as the language:
 
 * type the prefix for one of the snippets to view the IntelliSense for the snippets and insert it into your code.
 * Once a snippet has been inserted into your code you can use the tab key to tab through any values that require a value to be entered or selected.
 
-![Maximo Wiki Python Snippets Extension - Animated Gif](images\vscode_maximo-wiki_python_extn.gif)
+![Maximo Wiki Python Snippets Extension - Animated Gif](https://www.maximo.wiki/wp-content/uploads/2021/08/vscode_maximo-wiki_python_extn.gif)
 
-## Available Snippet Prefixes
+### Available Snippet Prefixes
 
 * getMboSet
 * getBoolean

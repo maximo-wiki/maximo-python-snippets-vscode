@@ -42,6 +42,72 @@ Added animated GIF to README.md and example snippet prefixes.
 
 ![Maximo Wiki Python Snippets Extension - Animated Gif](images\vscode_maximo-wiki_python_extn.gif)
 
+## Available Snippet Prefixes
+
+* getMboSet
+* getBoolean
+* getString
+* getInt
+* getByte
+* getLong
+* getFloat
+* getDouble
+* getDate
+
+* servc
+* sn
+* app
+* interactive
+* mbo
+* mboname
+* mbovalue
+* user
+* action
+* domainid
+* errorgroup
+* errorkey
+* evalresult
+* launchpoint
+* listErrorKey
+* listOrder
+* listWhere
+* params
+* relationObject
+* relationWhere
+* scriptHome
+* srcKeys
+* thisvalue
+* targetKeys
+* wfinstance
+
+* var_hidden
+* var_initial
+* var_internal
+* var_modified
+* var_previous
+* var_readonly
+* var_required
+
+* imp
+* impfrm
+* init
+* init
+* curr
+* prev
+* isNull
+* isMod
+* isEmpty
+* count
+* addrec
+
+* setValue
+* setValueNull
+* setConstant
+* setFieldMeta
+* getThisMboSet
+* MXServer.getThisMboSet
+* setWhere
+
 ### For more information
 
 * [Maximo Wiki](https://maximo.wiki)

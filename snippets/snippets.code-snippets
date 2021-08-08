@@ -1,61 +1,61 @@
 {
-    "Maximo.py getMboSet": {
+    "getMboSet": {
         "prefix": "getMboSet",
         "body": [
           "${1:mbovar} = ${2:mbo}.getMboSet('${3:mboSetName}')"
         ],
         "description": "maximo.wiki snippet mbo.getMboSet"
       },
-      "Maximo.py getBoolean": {
+      "getBoolean": {
         "prefix": "getBoolean",
         "body": [
           "${1:boolvar} = ${2:mbo}.getBoolean('${3:fieldname}')"
         ],
         "description": "maximo.wiki snippet mbo.getBoolean\nGet boolean value from mbo property."
       },
-      "Maximo.py getString": {
+      "getString": {
         "prefix": "getString",
         "body": [
           "${1:stringVar} = ${2:mbo}.getString('${3:fieldname}')"
         ],
         "description": "maximo.wiki snippet mbo.getString\nGet string value from mbo property."
       },
-      "Maximo.py getInt": {
+      "getInt": {
         "prefix": "getInt",
         "body": [
           "${1:intVar} = ${2:mbo}.getInt('${3:fieldname}')"
         ],
         "description": "maximo.wiki snippet mbo.getString\nGet integer value from mbo property."
       },
-      "Maximo.py getByte": {
+      "getByte": {
         "prefix": "getByte",
         "body": [
           "${1:byteVar} = ${2:mbo}.getByte('${3:fieldname}')"
         ],
         "description": "maximo.wiki snippet mbo.getByte\nGet byte value from mbo property."
       },
-      "Maximo.py getLong": {
+      "getLong": {
         "prefix": "getLong",
         "body": [
           "${1:longVar} = ${2:mbo}.getLong('${3:fieldname}')"
         ],
         "description": "maximo.wiki snippet mbo.getLong\nGet long value from mbo property."
       },
-      "Maximo.py getFloat": {
+      "getFloat": {
         "prefix": "getFloat",
         "body": [
           "${1:floatVar} = ${2:mbo}.getFloat('${3:fieldname}')"
         ],
         "description": "maximo.wiki snippet mbo.getFloat\nGet float value from mbo property."
       },
-      "Maximo.py getDouble": {
+      "getDouble": {
         "prefix": "getDouble",
         "body": [
           "${1:doubleVar} = ${2:mbo}.getDouble('${3:fieldname}')"
         ],
         "description": "maximo.wiki snippet mbo.getDouble\nGet numeric double precision value from mbo property."
       },
-      "Maximo.py getDate": {
+      "getDate": {
         "prefix": "getDate",
         "body": [
           "${1:dateVar} = ${2:mbo}.getDate('${3:fieldname}')"
@@ -192,11 +192,6 @@
         "body":"wfinstance",
         "description": "maximo.wiki snippet wfinstance \n wfinstance - Indicates the workflow instance from which the current action was started."
       },
-      "": {
-        "prefix": "",
-        "body":"",
-        "description": "maximo.wiki snippet ? \n ? - ?"
-      },
       "var_hidden": {
         "prefix": "var_hidden",
         "body":"var_hidden",
@@ -206,11 +201,6 @@
         "prefix": "var_initial",
         "body":"var_initial",
         "description": "maximo.wiki snippet var_initial\nvar_initial - Provides the initial value for an attribute that is retrieved from the MBO. The var_initial variable is passed to the script. The script cannot modify the var_initial variable."
-      },
-      "var_internal": {
-        "prefix": "var_internal",
-        "body":"var_internal",
-        "description": "maximo.wiki snippet var_internal\nvar_internal - Provides the internal value for an SYNONYMDOMAIN entry. If the primary variable is associated with a MBO attribute that is associated with a synonym domain, the var_internal implicit variable provides the corresponding internal value for the attribute. The var_internal variable is passed to the script. The script cannot modify the var_internal variable."
       },
       "var_internal": {
         "prefix": "var_internal",

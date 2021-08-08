@@ -77,5 +77,50 @@
         "body":"from ${1:psdi.package} import ${2:packageName}",
         "description": "maximo.wiki snippet import package"
       },
+      "initValue": {
+        "prefix": "init",
+        "body":"${1:initValue} = ${2:mboValue}.getInitialValue().asString()",
+        "description": "maximo.wiki snippet mbo initial value"
+      },
+      "currValue": {
+        "prefix": "curr",
+        "body":"${1:currValue} = ${2:mboValue}.getCurrentValue().asString()",
+        "description": "maximo.wiki snippet mbo current value"
+      },
+      "prevValue": {
+        "prefix": "prev",
+        "body":"${1:prevValue} = ${2:mboValue}.getPreviousValue().asString()",
+        "description": "maximo.wiki snippet mbo previous value"
+      },
+      "isNull": {
+        "prefix": "isNull",
+        "body":"if mbo.isNull('${1:fieldName}'):",
+        "description": "maximo.wiki snippet if mbo field is Null"
+      },
+      "isMod": {
+        "prefix": "isMod",
+        "body":"if mbo.isModified('${1:fieldName}'):",
+        "description": "maximo.wiki snippet if mbo field is modified"
+      },
+      "setValue": {
+        "prefix": "setValue",
+        "body":"mbo.setValue('${1:fieldName}', '${2:newFieldValue}')",
+        "description": "maximo.wiki snippet set Mbo value"
+      },
+      "setValueNull": {
+        "prefix": "setValueNull",
+        "body":"mbo.setValueNull('${1:fieldName}')",
+        "description": "maximo.wiki snippet set Mbo value null"
+      },
+      "setNoAccess": {
+        "prefix": "setConstant",
+        "body":"from psdi.mbo import MboConstants\nmbo.setValue('${1:fieldName}', MboConstants.${2|NOACCESSCHECK,NOVALIDATION,NOACTION,NOVALIDATION_AND_NOACTION|})",
+        "description": "maximo.wiki snippet set value with constant and import"
+      },
+      "setFieldMeta": {
+        "prefix": "setFieldMeta",
+        "body":"from psdi.mbo import MboConstants\nmbo.setFieldFlag('${1:fieldName'}, MboConstants.${2|READONLY,REQUIRED|},${3:boolean})",
+        "description": "maximo.wiki snippet set field flag with import"
+      },
 
 }

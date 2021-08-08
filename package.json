@@ -2,10 +2,29 @@
     "name": "ibm-maximo-python-snippets",
     "displayName": "IBM Maximo Python Snippets",
     "description": "snippets for coding in Python for IBM Maximo",
-    "version": "0.0.3",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.57.0"
     },
+    "keywords": [
+        "Maximo","Python","IBM","Wiki","Maximo.Wiki","Jython","automation","script"
+    ],
+    "icon": "images/icon.png",
+    "galleryBanner": {
+        "color": "#000000",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/maximo-wiki/maximo-python-snippets-vscode.git"
+      },
+    "bugs": {
+        "url": "https://github.com/maximo-wiki/maximo-python-snippets-vscode/issues",
+        "email": "git@maximo.wiki"
+    },
+    "homepage": "https://maximo.wiki",
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "publisher": "maximowiki",
     "categories": [
         "Snippets"
     ],

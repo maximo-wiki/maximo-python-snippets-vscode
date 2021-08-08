@@ -11,70 +11,240 @@
         "body": [
           "${1:boolvar} = ${2:mbo}.getBoolean('${3:fieldname}')"
         ],
-        "description": "maximo.wiki snippet mbo.getBoolean"
+        "description": "maximo.wiki snippet mbo.getBoolean\nGet boolean value from mbo property."
       },
       "Maximo.py getString": {
         "prefix": "getString",
         "body": [
-          "${1:stringvar} = ${2:mbo}.getString('${3:fieldname}')"
+          "${1:stringVar} = ${2:mbo}.getString('${3:fieldname}')"
         ],
-        "description": "maximo.wiki snippet mbo.getString"
+        "description": "maximo.wiki snippet mbo.getString\nGet string value from mbo property."
       },
       "Maximo.py getInt": {
         "prefix": "getInt",
         "body": [
-          "${1:intvar} = ${2:mbo}.getInt('${3:fieldname}')"
+          "${1:intVar} = ${2:mbo}.getInt('${3:fieldname}')"
         ],
-        "description": "maximo.wiki snippet mbo.getString"
+        "description": "maximo.wiki snippet mbo.getString\nGet integer value from mbo property."
       },
       "Maximo.py getByte": {
         "prefix": "getByte",
         "body": [
-          "${1:bytevar} = ${2:mbo}.getByte('${3:fieldname}')"
+          "${1:byteVar} = ${2:mbo}.getByte('${3:fieldname}')"
         ],
-        "description": "maximo.wiki snippet mbo.getByte"
+        "description": "maximo.wiki snippet mbo.getByte\nGet byte value from mbo property."
       },
       "Maximo.py getLong": {
         "prefix": "getLong",
         "body": [
-          "${1:longvar} = ${2:mbo}.getLong('${3:fieldname}')"
+          "${1:longVar} = ${2:mbo}.getLong('${3:fieldname}')"
         ],
-        "description": "maximo.wiki snippet mbo.getLong"
+        "description": "maximo.wiki snippet mbo.getLong\nGet long value from mbo property."
       },
       "Maximo.py getFloat": {
         "prefix": "getFloat",
         "body": [
-          "${1:floatvar} = ${2:mbo}.getFloat('${3:fieldname}')"
+          "${1:floatVar} = ${2:mbo}.getFloat('${3:fieldname}')"
         ],
-        "description": "maximo.wiki snippet mbo.getFloat"
+        "description": "maximo.wiki snippet mbo.getFloat\nGet float value from mbo property."
       },
       "Maximo.py getDouble": {
         "prefix": "getDouble",
         "body": [
-          "${1:doublevar} = ${2:mbo}.getDouble('${3:fieldname}')"
+          "${1:doubleVar} = ${2:mbo}.getDouble('${3:fieldname}')"
         ],
-        "description": "maximo.wiki snippet mbo.getDouble"
+        "description": "maximo.wiki snippet mbo.getDouble\nGet numeric double precision value from mbo property."
       },
       "Maximo.py getDate": {
         "prefix": "getDate",
         "body": [
-          "${1:java.util.date} = ${2:mbo}.getDate('${3:fieldname}')"
+          "${1:dateVar} = ${2:mbo}.getDate('${3:fieldname}')"
         ],
-        "description": "maximo.wiki snippet mbo.getDate"
+        "description": "maximo.wiki snippet mbo.getDate\nGet date value from mbo property as java.util.date."
       },
       "Service choice": {
         "prefix": "servc",
         "body":"service.${1|log,warn,error|}('${0}')",
-        "description": "maximo.wiki snippet service.log"
+        "description": "maximo.wiki snippet service.log/service.warn/service.error\nservice.log - print string to service log.\nservice.warn - display warning in UI and continue execution\nservice.error - display error in UI and halt execution"
       },
       "scriptName": {
         "prefix": "sn",
         "body":"scriptName",
-        "description": "maximo.wiki snippet scriptName"
+        "description": "maximo.wiki snippet scriptName\nscriptName - implicit variable used to fetch the name of the current automation script."
+      },
+      "app": {
+        "prefix": "app",
+        "body":"app",
+        "description": "maximo.wiki snippet app\napp - implicit variable used to fetch the name of the current Maximo application."
+      },
+      "interactive": {
+        "prefix": "interactive",
+        "body":"interactive",
+        "description": "maximo.wiki snippet interactive\ninteractive - implicit boolean variable used to fetch whether the current automation script is executing interactively."
+      },
+      "mbo": {
+        "prefix": "mbo",
+        "body":"mbo",
+        "description": "maximo.wiki snippet interactive\ninteractive - implicit variable containing current MBO.\nCaution: MBO implicit variable is not available in all instances,\nfor example whilst executing a library script."
+      },
+      "mboname": {
+        "prefix": "mboname",
+        "body":"mboname",
+        "description": "maximo.wiki snippet mboname\nmboname - implicit variable containing current MBO's name."
+      },
+      "mbovalue": {
+        "prefix": "mbovalue",
+        "body":"mbovalue",
+        "description": "maximo.wiki snippet mbovalue\nmbovalue - implicit variable instance of the MBO attribute.\nCaution: Only available for Attribute Launch Point Automation Scripts."
+      },
+      "user": {
+        "prefix": "user",
+        "body":"user",
+        "description": "maximo.wiki snippet user\nuser - implicit variable containing the user ID of the current user.\n"
+      },
+      "action": {
+        "prefix": "action",
+        "body":"action",
+        "description": "maximo.wiki snippet action\naction - implicit variable containing the action that is generated from the action launch point.\nCaution: Only available for Action Launch Point Automation Scripts."
+      },
+      "domainid": {
+        "prefix": "domainid",
+        "body":"domainid",
+        "description": "maximo.wiki snippet domainid\ndomainid - implicit variable specifies the domain that is used to provide the list of values that are shown for the attribute launch point.\nCaution: Only available for Action Launch Point Automation Scripts."
+      },
+      "errorgroup": {
+        "prefix": "errorgroup",
+        "body":"errorgroup",
+        "description": "maximo.wiki snippet errorgroup\nerrorgroup - Selects the message group identifier that is defined in the Database Configuration application. The errorgroup variable is set in the script. Together with the errorkey variable, the errorgroup variable identifies an error message that is declared in the message repository."
+      },
+      "errorkey": {
+        "prefix": "errorkey",
+        "body":"errorkey",
+        "description": "maximo.wiki snippet errorkey\nerrorkey - Enables script authors to set an error message from the script into the business object. The script code selects the Message Key identifier that is defined in the Database Configuration application. The errorkey works with the errorgroup and the params implicit variables. The advantage of setting an error message from the messages repository is that translated messages are automatically picked up. The script code sets the error key that is configured in the Database Configuration application. The errorkey variable is set in the script."
+      },
+      "evalresult": {
+        "prefix": "evalresult",
+        "body":"evalresult",
+        "description": "maximo.wiki snippet evalresult\nevalresult - Set in the script. Workflow condition evaluation and security conditions scripts return true or false values. Caution: Only available in Condition launch point automation scripts."
+      },
+      "launchPoint": {
+        "prefix": "launchPoint",
+        "body":"launchPoint",
+        "description": "maximo.wiki snippet launchPoint\nlaunchPoint - Indicates the name of the launch point for which the script is run."
+      },
+      "listErrorGroup": {
+        "prefix": "listErrorGroup",
+        "body":"listErrorGroup",
+        "description": "maximo.wiki snippet listErrorGroup \n listErrorGroup - Identifies the group ID of the message that the user sees when the retrieve list event fails. Caution: Use this variable only when the attribute launch point implements the retrieve list event. Specify the listErrorGroup and listErrorKey variables together and use the messages facility in the Database Configuration application to select the message that is stored in the MAXMESSAGES table."
+      },
+      "listErrorKey": {
+        "prefix": "listErrorKey",
+        "body":"listErrorKey",
+        "description": "maximo.wiki snippet listErrorKey \n listErrorKey - Identifies the key ID of the message that the user sees when the retrieve list event fails.\nCaution: Use this variable only when the attribute launch point implements the retrieve list event. Specify the listErrorGroup and listErrorKey variables together and use the messages facility in the Database Configuration application to select the message that is stored in the MAXMESSAGES table."
+      },
+      "listOrder": {
+        "prefix": "listOrder",
+        "body":"listOrder",
+        "description": "maximo.wiki snippet listOrder \n listOrder - Set to any ORDER BY attribute names that are used to order the results of the retrieve list event.\nCaution: Use this variable only when the attribute launch point implements the retrieve list event."
+      },
+      "listWhere": {
+        "prefix": "listWhere",
+        "body":"listWhere",
+        "description": "maximo.wiki snippet listWhere \n listWhere - Establishes which set of result data is displayed and which filter is set before the results are shown. Set the listWhere variable to a WHERE clause that uses the related MBO.\nCaution: Use this variable only when the attribute launch point implements the retrieve list event."
+      },
+      "params": {
+        "prefix": "params",
+        "body":"params",
+        "description": "maximo.wiki snippet params \n params - Holds the final resolved parameters to be applied into the error message that is posted from the script. The params implicit variable is an array. A message that is declared in the messages repository might have parameters that are defined. The contents of the message are fully resolved only at run time in the context of the script code. The params variable is used with the errogroup variable and the errorkey variable to prepare the error message that is posted from the script code. The params variable is set in the script."
+      },
+      "relationObject": {
+        "prefix": "relationObject",
+        "body":"relationObject",
+        "description": "maximo.wiki snippet relationObject \n relationObject - Applies to the related MBO that is searched from the current MBO.\nCaution: Use this variable only when the attribute launch point implements the retrieve list event. Typically used with the srcKeys and targetKeys implicit variables."
+      },
+      "relationWhere": {
+        "prefix": "relationWhere",
+        "body":"relationWhere",
+        "description": "maximo.wiki snippet relationWhere \n relationWhere - Establishes the criteria that is used to perform the retrieve list event. Set to a WHERE clause that queries the related MBO.\nCaution: Use this variable only when the attribute launch point implements the retrieve list event. Typically used with the srcKeys and targetKeys implicit variables. "
+      },
+      "scriptHome": {
+        "prefix": "scriptHome",
+        "body":"scriptHome",
+        "description": "maximo.wiki snippet scriptHome \n scriptHome - References the MBO that is worked on. The preferred approach to implementing scripts is to use the mbo keyword in the script code.\nCaution: Only available to Action launch point automation scripts."
+      },
+      "srcKeys": {
+        "prefix": "srcKeys",
+        "body":"srcKeys",
+        "description": "maximo.wiki snippet srcKeys \n srcKeys - Applies to the set of attribute names from the current MBO that is used to lookup a related record in another related or target MBO. For example, the set of attribute names from the current MBO might be used to look up that FAILURECODES field from the ASSET business object.\nCaution: Only use when the attribute launch point implements the retrieve list event."
+      },
+      "thisvalue": {
+        "prefix": "thisvalue",
+        "body":"thisvalue",
+        "description": "maximo.wiki snippet thisvalue \n thisvalue - Represents the current attribute. For example, thisvalue='abc' sets the current value to abc. Caution: Use this variable as the init value and the init access restriction for attribute launch points"
+      },
+      "targetKeys": {
+        "prefix": "targetKeys",
+        "body":"targetKeys",
+        "description": "maximo.wiki snippet targetKeys \n targetKeys - Applies to the set of attribute names in the target MBO that is looked up from the current MBO on which the attribute launch point is defined.\nCaution: Use only When the attribute launch point implements the retrieve list event."
+      },
+      "wfinstance": {
+        "prefix": "wfinstance",
+        "body":"wfinstance",
+        "description": "maximo.wiki snippet wfinstance \n wfinstance - Indicates the workflow instance from which the current action was started."
+      },
+      "": {
+        "prefix": "",
+        "body":"",
+        "description": "maximo.wiki snippet ? \n ? - ?"
+      },
+      "var_hidden": {
+        "prefix": "var_hidden",
+        "body":"var_hidden",
+        "description": "maximo.wiki snippet var_hidden\nvar_hidden - Retrieves or sets the hidden flag for the business object attribute. The script can modify the var_hidden variable if the primary variable is of an OUT or INOUT type."
+      },
+      "var_initial": {
+        "prefix": "var_initial",
+        "body":"var_initial",
+        "description": "maximo.wiki snippet var_initial\nvar_initial - Provides the initial value for an attribute that is retrieved from the MBO. The var_initial variable is passed to the script. The script cannot modify the var_initial variable."
+      },
+      "var_internal": {
+        "prefix": "var_internal",
+        "body":"var_internal",
+        "description": "maximo.wiki snippet var_internal\nvar_internal - Provides the internal value for an SYNONYMDOMAIN entry. If the primary variable is associated with a MBO attribute that is associated with a synonym domain, the var_internal implicit variable provides the corresponding internal value for the attribute. The var_internal variable is passed to the script. The script cannot modify the var_internal variable."
+      },
+      "var_internal": {
+        "prefix": "var_internal",
+        "body":"var_internal",
+        "description": "maximo.wiki snippet var_internal\nvar_internal - Provides the internal value for an SYNONYMDOMAIN entry. If the primary variable is associated with a MBO attribute that is associated with a synonym domain, the var_internal implicit variable provides the corresponding internal value for the attribute. The var_internal variable is passed to the script. The script cannot modify the var_internal variable."
+      },
+      "var_modified": {
+        "prefix": "var_modified",
+        "body":"var_modified",
+        "description": "maximo.wiki snippet var_modified\nvar_modified - Provides a flag that indicates whether the value for an attribute was modified. The var_modified variable is passed to the script. The script cannot modify the var_modified variable."
+      },
+      "var_previous": {
+        "prefix": "var_previous",
+        "body":"var_previous",
+        "description": "maximo.wiki snippet var_previous\nvar_previous - Provides the previous value for an attribute that is retrieved from the MBO. The var_previous variable is passed to the script. The script cannot modify the var_previous variable. Caution: Available in Attribute launch point automation scripts but only for the attribute that generated the event."
+      },
+      "var_readonly": {
+        "prefix": "var_readonly",
+        "body":"var_readonly",
+        "description": "maximo.wiki snippet var_readonly\nvar_readonly - Retrieves or sets the read-only flag for a business object attribute. The script can modify var_readonly if the primary variable is of an OUT or INOUT type."
+      },
+      "var_required": {
+        "prefix": "var_required",
+        "body":"var_required",
+        "description": "maximo.wiki snippet var_required\nvar_required - Retrieves or sets the required flag for a business object attribute. The script can modify var_required if the primary variable is of an OUT or INOUT type."
       },
       "import": {
         "prefix": "imp",
         "body":"from ${1:psdi.package} import ${2:packageName}",
+        "description": "maximo.wiki snippet import package from "
+      },
+      "import from": {
+        "prefix": "impfrm",
+        "body":"import ${1:packageName}",
         "description": "maximo.wiki snippet import package"
       },
       "initValue": {
@@ -102,6 +272,24 @@
         "body":"if mbo.isModified('${1:fieldName}'):",
         "description": "maximo.wiki snippet if mbo field is modified"
       },
+      "isEmpty": {
+        "prefix": "isEmpty",
+        "body":"if mbo.getMboSet('${1:fieldName}').isEmpty():",
+        "description": "maximo.wiki snippet if mbo field is empty"
+      },
+      "count": {
+        "prefix": "count",
+        "body":"count = mbo.getMboSet('${1:fieldName}').count():",
+        "description": "maximo.wiki snippet count MboSet"
+      },
+      "add record": {
+        "prefix": "addrec",
+        "body": ["${1:mboSetVar} = ${2:relatedMboSet}.getMboSet('${3:fieldName}')",
+                  "${4:mboVar} = ${1:mboSetVar}.add()",
+                  "${4:mboVar}.setValue(${5:fieldName}, ${6:valueToSet})",
+        ],
+        "description": "maximo.wiki snippet add record to MboSet and set value for field in new record."
+      },
       "setValue": {
         "prefix": "setValue",
         "body":"mbo.setValue('${1:fieldName}', '${2:newFieldValue}')",
@@ -114,13 +302,28 @@
       },
       "setNoAccess": {
         "prefix": "setConstant",
-        "body":"from psdi.mbo import MboConstants\nmbo.setValue('${1:fieldName}', MboConstants.${2|NOACCESSCHECK,NOVALIDATION,NOACTION,NOVALIDATION_AND_NOACTION|})",
+        "body": ["from psdi.mbo import MboConstants","mbo.setValue('${1:fieldName}', MboConstants.${2|NOACCESSCHECK,NOVALIDATION,NOACTION,NOVALIDATION_AND_NOACTION|})"],
         "description": "maximo.wiki snippet set value with constant and import"
       },
       "setFieldMeta": {
         "prefix": "setFieldMeta",
-        "body":"from psdi.mbo import MboConstants\nmbo.setFieldFlag('${1:fieldName'}, MboConstants.${2|READONLY,REQUIRED|},${3:boolean})",
+        "body": ["from psdi.mbo import MboConstants","mbo.setFieldFlag('${1:fieldName'}, MboConstants.${2|READONLY,REQUIRED|},${3:boolean})"],
         "description": "maximo.wiki snippet set field flag with import"
       },
-
+      "getThisMboSet": {
+        "prefix": "getThisMboSet",
+        "body":"${1:mboSetVal} = mbo.getThisMboSet()",
+        "description": "maximo.wiki snippet get current Mbo set"
+      },
+      "MXServer getMboSet": {
+        "prefix": "MXServer.getThisMboSet",
+        "body": ["from psdi.server import MXServer","${1:mboSetVal} = MXServer.getMXServer().getMboSet('${2:mboSetName}', mbo.getUserInfo())"],
+        "description": "maximo.wiki snippet get named Mbo set from MXServer\nCaution: breaks transaction."
+      },
+      "setWhere": {
+        "prefix": "setWhere",
+        "body":"mbo.setWhere('${1:sqlWhereClause}')",
+        "description": "maximo.wiki snippet set Mbo set's SQL Where Clause"
+      }, 
+      
 }

@@ -1,6 +1,6 @@
-# ibm-maximo-python-snippets README
+# IBM Maximo Python Automation Script Code Snippets 
 
-Snippets for use when developing automation scripts in Python for the IBM Maximo Enterprise Asset Management System created by [Maximo Wiki](https://maximo.wiki).   Initially based on [Automation Scripts Quick Reference](https://bportaluri.com/automation-scripts-quick-reference) (by Bruno Portaluri) with further additions.  Please note the author of this Visual Studio Code Extension is not affiliated with IBM.
+Snippets created by [Maximo Wiki](https://maximo.wiki) for use when developing automation scripts in Python for the IBM Maximo Enterprise Asset Management System.   Initially based on [Automation Scripts Quick Reference](https://bportaluri.com/automation-scripts-quick-reference) (by Bruno Portaluri) with further additions.  Please note the author of this Visual Studio Code Extension is not affiliated with IBM.
 
 ## Features
 
@@ -26,19 +26,26 @@ Initial Release.
 
 Initial release of IBM Maximo Python Snippets.
 
+### 1.0.1
+
+Added animated GIF to README.md and example snippet prefixes.
+
 
 -----------------------------------------------------------------------------------------------------------
 
 ## Working with Maximo Wiki Python Snippets
 
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+**Note:** In order to utilise Maximo Wiki Python Snippets create a new file or edit an existing file in Visual Studio code and select Python as the language:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+* type the prefix for one of the snippets to view the IntelliSense for the snippets and insert it into your code.
+* Once a snippet has been inserted into your code you can use the tab key to tab through any values that require a value to be entered or selected.
+
+![Maximo Wiki Python Snippets Extension - Animated Gif](images\vscode_maximo-wiki_python_extn.gif)
 
 ### For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+* [Maximo Wiki](https://maximo.wiki)
+* [Maximo Wiki Python Snippets GitHub Repo ](https://github.com/maximo-wiki/maximo-python-snippets-vscode)
+
+Please submit an issue (preferably with an attached Pull Request) on the above GitHub repo for any corrections or additions to the snippets provided.
 

@@ -2,7 +2,7 @@
     "name": "ibm-maximo-python-snippets",
     "displayName": "IBM Maximo Python Snippets",
     "description": "snippets for coding in Python for IBM Maximo",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "engines": {
         "vscode": "^1.57.0"
     },
@@ -11,7 +11,7 @@
     ],
     "icon": "images/icon.png",
     "galleryBanner": {
-        "color": "#000000",
+        "color": "#141414",
         "theme": "dark"
     },
     "repository": {

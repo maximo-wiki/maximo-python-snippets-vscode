@@ -315,5 +315,23 @@
         "body":"mbo.setWhere('${1:sqlWhereClause}')",
         "description": "maximo.wiki snippet set Mbo set's SQL Where Clause"
       }, 
+      "service.ync": {
+        "prefix": "service.ync",
+        "body":["def ${1:yes}():",
+                "\t# handle Yes button press",
+                "def ${2:no}():",
+                "\t# handle No button press",
+                "def ${3:dflt}():",
+                "\t# display the initial message",
+                "\tservice.yncerror('${4:msggroup}', '${5:msg}')",
+                "cases = {service.YNC_NULL:${3:dflt}, service.YNC_YES:${1:yes}, service.YNC_NO:${2:no}",
+                "if interactive:",
+                "\t# service yncuser input method to trigger the interaction",
+                "\t${6:x} = service.yncuserinput()",
+                "\t# process user input using case statement",
+                "\tcases[${6:x}]()"],
+        "description": "maximo.wiki snippet for service.ync dialog box"
+      },
+      
       
 }

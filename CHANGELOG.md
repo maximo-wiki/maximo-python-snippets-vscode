@@ -20,3 +20,7 @@ All notable changes to the "ibm-maximo-python-snippets" extension will be docume
 - Updated package.json.
 - Added additional Python snippets for IBM Maximo 7.x.
 - Added MIT License.
+
+### 1.0.4
+
+ - Additional Python snippets for IBM Maximo Automation Scripts.

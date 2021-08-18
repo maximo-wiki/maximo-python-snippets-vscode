@@ -38,6 +38,11 @@ None at present.
 - Updated package.json
 - Added additional Python snippets for IBM Maximo 7.x.
 - Added MIT License.
+
+### 1.0.4
+
+- Additional Python snippets for IBM Maximo Automation Scripts.
+
 -----------------------------------------------------------------------------------------------------------
 
 ### Working with Maximo Wiki Python Snippets
@@ -116,6 +121,8 @@ None at present.
 * setWhere
 
 * service.ync
+* condition
+* comment
 
 ### For more information
 
@@ -123,4 +130,3 @@ None at present.
 * [Maximo Wiki Python Snippets GitHub Repo ](https://github.com/maximo-wiki/maximo-python-snippets-vscode)
 
 Please submit an issue (preferably with an attached Pull Request) on the above GitHub repo for any corrections or additions to the snippets provided.
-

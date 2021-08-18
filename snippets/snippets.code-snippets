@@ -2,28 +2,28 @@
     "getMboSet": {
         "prefix": "getMboSet",
         "body": [
-          "${1:mbovar} = ${2:mbo}.getMboSet('${3:mboSetName}')"
+          "${1:mbovar} = ${2:mbo}.getMboSet('${3:mboSetName/upcase}')"
         ],
         "description": "maximo.wiki snippet mbo.getMboSet"
       },
       "getBoolean": {
         "prefix": "getBoolean",
         "body": [
-          "${1:boolvar} = ${2:mbo}.getBoolean('${3:fieldname}')"
+          "${1:boolvar} = ${2:mbo}.getBoolean('${3:fieldname/upcase}')"
         ],
         "description": "maximo.wiki snippet mbo.getBoolean\nGet boolean value from mbo property."
       },
       "getString": {
         "prefix": "getString",
         "body": [
-          "${1:stringVar} = ${2:mbo}.getString('${3:fieldname}')"
+          "${1:stringVar} = ${2:mbo}.getString('${3:fieldname/upcase}')"
         ],
         "description": "maximo.wiki snippet mbo.getString\nGet string value from mbo property."
       },
       "getInt": {
         "prefix": "getInt",
         "body": [
-          "${1:intVar} = ${2:mbo}.getInt('${3:fieldname}')"
+          "${1:intVar} = ${2:mbo}.getInt('${3:fieldname/upcase}')"
         ],
         "description": "maximo.wiki snippet mbo.getString\nGet integer value from mbo property."
       },
@@ -37,28 +37,28 @@
       "getLong": {
         "prefix": "getLong",
         "body": [
-          "${1:longVar} = ${2:mbo}.getLong('${3:fieldname}')"
+          "${1:longVar} = ${2:mbo}.getLong('${3:fieldname/upcase}')"
         ],
         "description": "maximo.wiki snippet mbo.getLong\nGet long value from mbo property."
       },
       "getFloat": {
         "prefix": "getFloat",
         "body": [
-          "${1:floatVar} = ${2:mbo}.getFloat('${3:fieldname}')"
+          "${1:floatVar} = ${2:mbo}.getFloat('${3:fieldname/upcase}')"
         ],
         "description": "maximo.wiki snippet mbo.getFloat\nGet float value from mbo property."
       },
       "getDouble": {
         "prefix": "getDouble",
         "body": [
-          "${1:doubleVar} = ${2:mbo}.getDouble('${3:fieldname}')"
+          "${1:doubleVar} = ${2:mbo}.getDouble('${3:fieldname/upcase}')"
         ],
         "description": "maximo.wiki snippet mbo.getDouble\nGet numeric double precision value from mbo property."
       },
       "getDate": {
         "prefix": "getDate",
         "body": [
-          "${1:dateVar} = ${2:mbo}.getDate('${3:fieldname}')"
+          "${1:dateVar} = ${2:mbo}.getDate('${3:fieldname/upcase}')"
         ],
         "description": "maximo.wiki snippet mbo.getDate\nGet date value from mbo property as java.util.date."
       },
@@ -254,27 +254,27 @@
       },
       "isNull": {
         "prefix": "isNull",
-        "body":"if mbo.isNull('${1:fieldName}'):",
+        "body":"if mbo.isNull('${1:fieldName/upcase}'):",
         "description": "maximo.wiki snippet if mbo field is Null"
       },
       "isMod": {
         "prefix": "isMod",
-        "body":"if mbo.isModified('${1:fieldName}'):",
+        "body":"if mbo.isModified('${1:fieldName/upcase}'):",
         "description": "maximo.wiki snippet if mbo field is modified"
       },
       "isEmpty": {
         "prefix": "isEmpty",
-        "body":"if mbo.getMboSet('${1:fieldName}').isEmpty():",
+        "body":"if mbo.getMboSet('${1:fieldName/upcase}').isEmpty():",
         "description": "maximo.wiki snippet if mbo field is empty"
       },
       "count": {
         "prefix": "count",
-        "body":"count = mbo.getMboSet('${1:fieldName}').count():",
+        "body":"count = mbo.getMboSet('${1:fieldName/upcase}').count():",
         "description": "maximo.wiki snippet count MboSet"
       },
       "add record": {
         "prefix": "addrec",
-        "body": ["${1:mboSetVar} = ${2:relatedMboSet}.getMboSet('${3:fieldName}')",
+        "body": ["${1:mboSetVar} = ${2:relatedMboSet}.getMboSet('${3:fieldName/upcase}')",
                   "${4:mboVar} = ${1:mboSetVar}.add()",
                   "${4:mboVar}.setValue(${5:fieldName}, ${6:valueToSet})",
         ],
@@ -282,22 +282,22 @@
       },
       "setValue": {
         "prefix": "setValue",
-        "body":"mbo.setValue('${1:fieldName}', '${2:newFieldValue}')",
+        "body":"mbo.setValue('${1:fieldName/upcase}', '${2:newFieldValue}')",
         "description": "maximo.wiki snippet set Mbo value"
       },
       "setValueNull": {
         "prefix": "setValueNull",
-        "body":"mbo.setValueNull('${1:fieldName}')",
+        "body":"mbo.setValueNull('${1:fieldName/upcase}')",
         "description": "maximo.wiki snippet set Mbo value null"
       },
       "setNoAccess": {
         "prefix": "setConstant",
-        "body": ["from psdi.mbo import MboConstants","mbo.setValue('${1:fieldName}', MboConstants.${2|NOACCESSCHECK,NOVALIDATION,NOACTION,NOVALIDATION_AND_NOACTION|})"],
+        "body": ["from psdi.mbo import MboConstants","mbo.setValue('${1:fieldName/upcase}', MboConstants.${2|NOACCESSCHECK,NOVALIDATION,NOACTION,NOVALIDATION_AND_NOACTION|})"],
         "description": "maximo.wiki snippet set value with constant and import"
       },
       "setFieldMeta": {
         "prefix": "setFieldMeta",
-        "body": ["from psdi.mbo import MboConstants","mbo.setFieldFlag('${1:fieldName'}, MboConstants.${2|READONLY,REQUIRED|},${3:boolean})"],
+        "body": ["from psdi.mbo import MboConstants","mbo.setFieldFlag('${1:fieldName/upcase'}, MboConstants.${2|READONLY,REQUIRED|},${3:boolean})"],
         "description": "maximo.wiki snippet set field flag with import"
       },
       "getThisMboSet": {
@@ -307,7 +307,7 @@
       },
       "MXServer getMboSet": {
         "prefix": "MXServer.getThisMboSet",
-        "body": ["from psdi.server import MXServer","${1:mboSetVal} = MXServer.getMXServer().getMboSet('${2:mboSetName}', mbo.getUserInfo())"],
+        "body": ["from psdi.server import MXServer","${1:mboSetVal} = MXServer.getMXServer().getMboSet('${2:mboSetName/upcase}', mbo.getUserInfo())"],
         "description": "maximo.wiki snippet get named Mbo set from MXServer\nCaution: breaks transaction."
       },
       "setWhere": {
@@ -324,7 +324,7 @@
                 "def ${3:dflt}():",
                 "\t# display the initial message",
                 "\tservice.yncerror('${4:msggroup}', '${5:msg}')",
-                "cases = {service.YNC_NULL:${3:dflt}, service.YNC_YES:${1:yes}, service.YNC_NO:${2:no}",
+                "cases = {service.YNC_NULL:${3:dflt}, service.YNC_YES:${1:yes}, service.YNC_NO:${2:no}}",
                 "if interactive:",
                 "\t# service yncuser input method to trigger the interaction",
                 "\t${6:x} = service.yncuserinput()",
@@ -332,6 +332,30 @@
                 "\tcases[${6:x}]()"],
         "description": "maximo.wiki snippet for service.ync dialog box"
       },
-      
-      
+      "condition": {
+        "prefix": "condition",
+        "body":["$BLOCK_COMMENT_START Custom condition automation script which can be used",
+          "to perform complex calculations",
+          "for example for use in a Maximo workflow $BLOCK_COMMENT_END",
+          "",
+          "if(${1:logicTest}):",
+          "\tevalresult=False",
+          "else:",
+          "\tevalresult=True",
+        ],   
+        "description": "maximo.wiki snippet for Custom Condition Automation Script.  Note: set the conditions expression as <scriptname>:<launchpointname> where script name is the name of this custom condition automation script and the launch point name is the launch point for the custom condition automation script. Class: com.ibm.tivoli.maximo.script.ScriptCustomCondition. Always Evaluate : Yes"
+      },
+      "comment": {
+        "prefix": "comment",
+        "body": [ "$BLOCK_COMMENT_START",
+          "-------------------------------------------------------------------",
+          "\tAutomation Script: ${TM_FILENAME}",
+          "\tCreated on: ${CURRENT_DATE}-${CURRENT_MONTH_NAME_SHORT}-${CURRENT_YEAR}",
+          "\tCreated by: ${1:author}",
+          "-------------------------------------------------------------------",
+          "$BLOCK_COMMENT_END",
+          "",
+        ],
+        "description": "maximo.wiki snippet to create comment block at beginning of automation script."
+      }, 
 }
